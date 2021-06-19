@@ -14,7 +14,6 @@ function stop() {
 	docker-compose stop
 }
 
-alias cd-rooftop="cd ~/Documents/Rooftop"
 
 function ac()
 {
@@ -26,9 +25,7 @@ function docker-bash()
 {
 	docker exec -it $1 bash
 }
-
-alias get_secret="cat ~/.secrets/keys | grep $1"
-
+alias show-remote="git remote get-url origin"
 alias run="python3 ~/Documents/Scripts/Search/index.py"
 
 alias dol="docker ps"
@@ -37,7 +34,6 @@ function witch() {
 	cat .ssh/config | grep $1
 }
 
-alias k=kubectl
 function open-project() {
 	ls ~/Documents/Projects | rofi -show -dmenu | xargs -I_ code ~/Documents/Projects/_
 }
